@@ -13,7 +13,6 @@ Enter Shoping Cart
 
 Shopping Cart Should Have
     [Arguments]    ${product_name}    ${product_desc}=null    ${product_price}=null
-    # Element Should Be Visible    xpath=//div[//div[[@data-test='inventory-item-name' and text()='${product_name}' ]]]
     Element Should Be Visible    xpath=//div[@data-test='inventory-item-name' and text()='${product_name}']
     ${product_item}=    Set Variable    //div[@class='inventory_item_name' and text()='${product_name}']/ancestor::div[@class='cart_item']
     IF    $product_desc != "null"
